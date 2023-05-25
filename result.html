@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Result</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="result.css">
+</head>
+<body>
+  <div id="result"> </div>
+    
+  <button><a href="FOOD_FORM.html">Back to Form</a>
+   </button>
+  <script>
+    
+    const resultsList = document.getElementById('result')
+    new URLSearchParams(window.location.search).forEach((value,   
+    name) => 
+    {
+         resultsList.append(`${name}: ${value}`)
+         resultsList.append(document.createElement('br'))
+    
+    })
+ 
+
+    </script>
+
+
+  
+</body>
+</html>

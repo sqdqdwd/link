@@ -2,32 +2,52 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title >koshary Form</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<label>first name</label>
-	<input type="text" id="hamada">
-	<br>
-	<label>last name</label>
-	<input type="text" id="lname">
-	<br>
-	<label>username</label>
-	<input type="text" id="username">
-	<br>
-	<label>email</label>
-	<input type="text" id="email">
-	<br>
-	<label>password</label>
-	<input type="text" id="pass">
-	<br>
-	<label>age</label>
-	<input type="text" id="age">
+	<h1 style=" color: #ffffff; text-decoration: underline; ">Food services Form</h1>
+	<form name="orderForm" 	action="http://127.0.0.1:5502/result.html" method="get"	onsubmit="regist()">
+	  <label>Name:</label>
+	  <input type="text" id="name" name="name" placeholder="Name" >
+	  <br><br>
+	  
+	  <label >Address:</label>
+	  <input type="text" id="address" name="address" placeholder="Address" >
+	  <br><br>
+  
+	  <label >Phoner Number:</label>
+	  <input type="text" id="phone" name="phone" placeholder="Phone Number" >
+	  <br><br>
+	  
+	  <label >Food Item:</label>
+	  <select id="food" name="food" onchange="display_Total()"    >
+		<option value="">__Select__</option>
+		<option value="20"  >koshary (20LE)</option>
+		<option value="6"   >Toasted_bread (6LE)</option>
+  
+	  </select><br><br>
+	   
+	  <label>EXTRAS:</label>
+	  <br>
+	  <input type="checkbox" name="EXTRAS :" value="8"  onclick="display_Total()">PEPSI (8LE)<br>
+	  <input type="checkbox" name="EXTRAS :" value="12"  onclick="display_Total()">Rice_with_milk (12LE)<br>
+	  <input type="checkbox" name="EXTRAS :" value="4"  onclick="display_Total()">WATER (4LE)<br>
+	  <input type="checkbox" name="EXTRAS :" value="6"  onclick="display_Total()">FRIED_ONION (6LE)<br><br>
+	  
+	  <button > 
+		submit
+		</a>
+	  </button>
+	</form>
+	
+	<div id="total"></div>
 	<br>
 	
+	<script src="test.js"></script>
+	<script src="js.js"></script>
+
 	
-	<button onclick="regist()">sup</button>
-	<script src="./test.js"></script>
+	
 </body>
 </html>

@@ -11,10 +11,8 @@ datasource db {
 }
 model hamada{
   id Int @id   @default(autoincrement())
-  fname String
-  lname String
-  username String
-  email String
-  pass String
-  age Int
+  name String 
+  address String
+  phone Int
+  food String
 }
