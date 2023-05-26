@@ -1,5 +1,5 @@
-
 async function regist() {
+  console.log("in");
     const user=
     {
 
@@ -10,16 +10,21 @@ async function regist() {
     
   
      }
+     const direct = await fetch
+     (
+         './addkoshari',
+     {
+     method: 'POST',
+       headers: { "Content-Type": "application/json" },
+     body:JSON.stringify(user), 
+     } 
+     )      
+         
+             
+
     console.log(user);
- const response = await fetch
-        (
-            'http://localhost:5000/adduser',
-        {
-        method: 'POST',
-          headers: { "Content-Type": "application/json" },
-        body:JSON.stringify(user), 
-        } 
-        )
-  
+  
+
+
 
 }

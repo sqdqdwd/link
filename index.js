@@ -22,15 +22,24 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname +'/index.html')
 
 })
-
-app.post('/adduser', async (req, res) => {
+var data;
+app.post('/addkoshari', async (req, res) => {
     data = req.body;
 
-res.send(data);
   const post = await prisma.hamada.create({
   data
     })
-
+  res.json({success : true})
 //  res.json(post);
 })
-app.listen(port, () => console.info(`A;; listening on port ${port}`))
+
+
+app.get('/result', (req, res) => {
+    
+  res.sendFile(__dirname +'/result.html')
+
+
+})
+
+
+app.listen(port, () => console.info(`A;; listening on port ${port}`))
